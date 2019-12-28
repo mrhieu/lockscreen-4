@@ -16,7 +16,9 @@ import { HomePage } from './home.page';
         path: '',
         component: HomePage
       }
-    ])
+    ]),
+  ],
+  providers: [
   ],
   declarations: [HomePage]
 })

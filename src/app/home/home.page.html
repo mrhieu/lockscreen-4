@@ -1,14 +1,28 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Lockscreen 4 (Ionic 4)
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
+    <div class="ion-padding-top">
+      <h4>Support</h4>
+      <ul>
+        <li>Touch ID (tested on iOS)</li>
+        <li>Face ID (tested on iOS)</li>
+      </ul>
+      <p>Default passcode: <code>1234</code></p>
+    </div>
+
+    <ion-button expand="block" color="danger" (click)="showLockscreen()">
+      <ion-icon name="md-lock" slot="start"></ion-icon>SHOW LOCKSCREEN
+    </ion-button>
+
+    <ion-text color="primary" *ngIf="isCorrect">
+      <p class="ion-text-center">Unlocked!</p>
+    </ion-text>
   </div>
 </ion-content>
