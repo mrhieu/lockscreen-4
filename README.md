@@ -1,5 +1,7 @@
 # Ionic 4 Lockscreen-4
 
+Provide a lockscreen UI that supports TouchID/FaceID, plus a beautiful keypad UI.
+
 [DEMO](https://stackblitz.com/github/mrhieu/lockscreen-4)
 
 (For some reason some dependencies are missing on Stackblitz side. Keep clicking INSTALL MISSING DEPENDENCIES until the demo shows up)
@@ -93,3 +95,8 @@ import { LockscreenService } from '../plugins/lockscreen/services/lockscreen.ser
       })
   }
 ```
+
+## Contact
+If you have any questions, don't hesitate to send me a message: [mr_hie@yahoo.com](mailto:mr_hie@yahoo.com)
+
+Homepage: [https://www.takethatdesign.com](https://www.takethatdesign.com)
