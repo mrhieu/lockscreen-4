@@ -5,15 +5,11 @@ import { RouteReuseStrategy } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import { TapticEngine } from '@ionic-native/taptic-engine/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-// TODO: import these in Lockscreen Module
-import { KeypadPageModule } from './plugins/lockscreen/components/keypad/keypad.module';
-import { LockscreenService } from './plugins/lockscreen/services/lockscreen.service';
-import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
+import { LockscreenModule } from './plugins/lockscreen/lockscreen.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -22,15 +18,12 @@ import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    KeypadPageModule,
+    LockscreenModule,
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    TapticEngine,
-    FingerprintAIO,
-    LockscreenService,
   ],
   bootstrap: [AppComponent]
 })
