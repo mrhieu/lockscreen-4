@@ -9,8 +9,11 @@ import { TapticEngine } from '@ionic-native/taptic-engine/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+
+// TODO: import these in Lockscreen Module
 import { KeypadPageModule } from './plugins/lockscreen/components/keypad/keypad.module';
 import { LockscreenService } from './plugins/lockscreen/services/lockscreen.service';
+import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,6 +29,7 @@ import { LockscreenService } from './plugins/lockscreen/services/lockscreen.serv
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     TapticEngine,
+    FingerprintAIO,
     LockscreenService,
   ],
   bootstrap: [AppComponent]

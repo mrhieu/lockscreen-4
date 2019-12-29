@@ -30,19 +30,6 @@ export class KeypadPage {
         active: false
       })
     }
-
-    // if (this.enableTouchId) {
-    //   setTimeout(() => {
-    //     this.touchId.isAvailable()
-    //       .then(
-    //         res => {
-    //           console.log('TouchID is available!');
-    //           this.useTouchId();
-    //         },
-    //         err => console.error('TouchID is not available', err)
-    //       );
-    //   }, 250);
-    // }
   }
 
   add(number: number) {
@@ -67,18 +54,6 @@ export class KeypadPage {
     this.inputCombination = '';
     this.updateDots();
   }
-
-  useTouchId() {
-    // this.touchId.verifyFingerprintWithCustomPasswordFallback('Authenticate using Touch ID')
-    //   .then(
-    //     res => {
-    //       console.log('TouchID authenticated successfully', res);
-    //       this.dismiss();
-    //     },
-    //     err => console.error('TouchID authentication failed', err)
-    //   );
-  }
-
 
   verify() {
     if (this.inputCombination === this.passcode) {

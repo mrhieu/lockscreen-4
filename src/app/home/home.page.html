@@ -17,6 +17,13 @@
       <p>Default passcode: <code>1234</code></p>
     </div>
 
+    <ion-list>
+      <ion-item lines="none">
+        <ion-label>Use Touch ID or Face ID</ion-label>
+        <ion-toggle color="danger" [(ngModel)]="enableTouchIdFaceId"></ion-toggle>
+      </ion-item>
+    </ion-list>
+
     <ion-button expand="block" color="danger" (click)="showLockscreen()">
       <ion-icon name="md-lock" slot="start"></ion-icon>SHOW LOCKSCREEN
     </ion-button>
